@@ -1,8 +1,6 @@
-// numeros pares e impares
-let i;
+let num1 = (8))
+let num2 = (8))
 
-for (i = 1; i <= 20; i++) {
-  if (i % 2 == 0) {
-    console.log(i);
-  }
-}
+let soma = num1 + num2
+
+console.log("o resultado é: " + soma)
