@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saudação</title>
+  </head>
+  <body>
+    <h2>Saudação Personalizada</h2>
+
+    <label>Seu nome:</label><br />
+    <input type="text" id="nome" /><br /><br />
+    <button onclick="saudar()">Exibir Saudação</button>
+
+    <div id="mensagem"></div>
+
+    <script>
+      function saudar() {
+        let nome = document.getElementById("nome").value
+
+        if (nome === "") {
+          alert("Digite seu nome!")
+          return
+        }
+
+        let agora = new Date()       // objeto com data e hora atual
+        let hora = agora.getHours() // retorna só a hora (0 a 23)
+
+        let saudacao = ""
+
+        if (hora >= 6 && hora < 12) {
+          saudacao = "Bom dia"
+        } else if (hora >= 12 && hora < 18) {
+          saudacao = "Boa tarde"
+        } else {
+          saudacao = "Boa noite"
+        }
+
+        document.getElementById("mensagem").textContent = saudacao + ", " + nome + ":)"
+      }
+    </script>
+  </body>
+</html>

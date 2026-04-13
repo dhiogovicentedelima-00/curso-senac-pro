@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contador de Cliques</title>
+  </head>
+  <body>
+    <h2>Contador de Cliques</h2>
+
+    <button onclick="contar()">Clique aqui!</button>
+    <button onclick="resetar()">Resetar</button>
+
+    <div id="resultado">Total de cliques: 0</div>
+
+    <script>
+      let contador = 0 // variável que guarda o número de cliques
+
+      function contar() {
+        contador = contador + 1 // incrementa 1 a cada clique
+        document.getElementById("resultado").textContent = "Total de cliques: " + contador
+      }
+
+      function resetar() {
+        contador = 0 // volta para zero
+        document.getElementById("resultado").textContent = "Total de cliques: 0"
+      }
+    </script>
+  </body>
+</html>

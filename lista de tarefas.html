@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista de Tarefas</title>
+  </head>
+  <body>
+    <h2>Lista de Tarefas</h2>
+
+    <input type="text" id="campo" placeholder="Digite uma tarefa..." />
+    <button onclick="adicionar()">Adicionar</button>
+
+    <ul id="lista"></ul>
+
+    <script>
+      function adicionar() {
+        let campo = document.getElementById("campo")
+        let texto = campo.value
+
+        if (texto === "") {
+          alert("Digite uma tarefa!")
+          return
+        }
+
+        let item = document.createElement("li")
+        item.textContent = texto
+
+        let botaoRemover = document.createElement("button")
+        botaoRemover.textContent = "Remover"
+        botaoRemover.onclick = function () {
+          item.remove()
+        }
+
+        item.appendChild(botaoRemover);
+        document.getElementById("lista").appendChild(item)
+
+        campo.value = ""
+      }
+
+      // Bônus: pressionar Enter também adiciona!
+      document.addEventListener("keydown", function (evento) {
+        if (evento.key === "Enter") {
+          adicionar()
+        }
+      })
+    </script>
+  </body>
+</html>

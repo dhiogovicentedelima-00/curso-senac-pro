@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+</html>
+
+<head></head>
+<title>Calculadora</title>
+
+<head></head>
+
+<body>
+
+    <h2>Calculadora</h2>
+    <input type=" text" id="tela" readonly> <br>
+
+
+    <button onclick="digitar('1')">1</button>
+    <button onclick="digitar('2')">2</button>
+    <button onclick="digitar('3')">3</button>
+    <button onclick="digitar('+')">+</button>
+
+    <br>
+    <button onclick="digitar('4')">4</button>
+    <button onclick="digitar('5')">5</button>
+    <button onclick="digitar('6')">6</button>
+    <button onclick="digitar('-')">-</button>
+
+    <br>
+    <button onclick="digitar('7')">7</button>
+    <button onclick="digitar('8')">8</button>
+    <button onclick="digitar('9')">9</button>
+    <button onclick="didigitar('*')">*</button>
+
+    <br>
+    <button onclick="digitar('0')">0</button>
+    <button onclick="calcular()">=</button>
+    <button onclick="limpar()">C</button>
+    <button onclick="digitar('/')">÷</button>
+
+    <input readonly>
+    <script>
+        function digitar(valor) {
+            document.getElementById("tela").value += valor
+        }
+        function calcular() {
+            let tela = document.getElementById("tela")
+            tela.value = eval(tela.value)
+        }
+        function calcualr() {
+            let tela = document.getElementById("tela")
+            tela.value = eval(tela.value)
+        }
+
+        function limpar() {
+            document.getElementById("tela").value = ''
+        }
+    </script>
